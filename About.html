@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+    
+       body {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background-image: url("https://uncreatice.neocities.org/stars.gif");
+        background-size: 25%; /* Ensures the background covers the entire page */
+        background-repeat: repeat; /* Prevents the background from repeating */
+        background-attachment: fixed;/* Keeps the background fixed during scrolling */
+        overflow: hidden;
+        height: auto; 
+        margin: 0;
+        padding: 0;
+}
+        .container {
+            height: auto;
+            left:65%;
+            width: 230px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #dfb14e;
+            box-shadow: 5px 5px 0 #000;
+            border: 3px solid #fff;
+        }
+        header, footer {
+            background-color: #dfb14e;
+            color: #ffcc00;
+            text-shadow: 3px 3px 0 black, -3px -3px 0 black, 3px, -3px 0 black, -3px 3px 0 black;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffcc00 ;
+            font-weight:bold;
+        }
+        .nav{
+            background-color: #dfb14e;
+            border: 3px ridge #fff;
+            padding: 20px;
+          }
+        .content-container{
+          width: 90%;
+          height:500px;
+          max-width: 800px;
+          overflow:auto;
+          margin: 50px auto;
+          background: #dfb14e;
+          position: relative;
+          padding: 20px;
+          border: 3px ridge #fff;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          box-shadow: 5px 5px 0 #000;
+          }
+        .profile-box{
+          position: absolute;
+          top: 140px;
+          left: 4px;
+          background: white;
+          padding: 10px;
+          border: 3px ridge black;
+          box-shadow: 5px 5px 0 black;
+          width: 200px;
+          height: 250px;
+          z-index:1000;
+          }
+        .profile-box img{
+          display: block;
+          border: none;
+          Background: none;
+          box-shadow: none;
+          top: -36px;
+          width: 110%;
+          height: 110%;
+          left: -15%
+          object-fit: cover;
+          }
+        .about-text{
+          font-size: 1.2em;
+          line-height: 1.5;
+          text-align: center;
+          }
+        .aboutme{
+          position: absolute;
+          top: 410px;
+          left: 4px;
+          z-index: 999;
+          background: grey;
+          padding: 10px;
+          border: 3px ridge black;
+          box-shadow: 5px 5px 0 black;
+          width: 200px;
+          height: 60px;
+          }
+        .about-text{
+          font-size 1.2em;
+          line-height: 1.5;
+          }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .info-box {
+            flex: 1 1 45%;
+            background-color: #f3de89;
+            min-width:250px;
+            padding: 15px;
+            color: white;
+            text-shadow: 3px 3px 0 black, -3px -3px 0 black, 3px, -3px 0 black, -3px 3px 0 black;
+            letter-spacing: 2px;
+            border: 4px ridge #00bbcf;
+            box-shadow: 5px 5px 0 #000;
+            text-align: center;
+        }
+        .rightside-box{
+          background: #f3de89;
+          color: white;
+          padding: 15px;
+          border: 4px ridge #00bbcf;
+          box-shadow: 5px 5px 0 #000;
+          }
+          
+        .grid{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           gap: 20px;
+           width: 100%;
+          }
+
+        .decorative-image{
+          position:absolute;
+          top:32px;
+          left:15%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:590px;
+          }
+         .decorative-image2{
+          position:absolute;
+          top:455px;
+          left:7%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:290px;
+          } https://uncreatice.neocities.org/About
+
+  
+        @media (max-width: 600px){
+          .content{
+            flex-direction: column;
+            }
+          .info-box{
+            flex 1 1 100%;
+            }
+          }
+
+
+       /*Custom Scroll bar*/
+
+  ::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+   }
+
+ ::-webkit-scrollbar-track {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAFElEQVQIW2M4fPz0////GYAYyAIASnoKpV3w4kgAAAAASUVORK5CYII=");
+    image-rendering: pixelated;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+ ::-webkit-scrollbar-track:active {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAEElEQVQIW2No6+pjgAAgCwAWogM9VKrgGQAAAABJRU5ErkJggg==");
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+ ::-webkit-scrollbar-thumb {
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: inset 1px 1px 0 0 white, inset -1px -1px 0 0 #868a8e;
+    width: 16px;
+    height: 16px;
+    background-color: #cccccc;
+    z-index: 1;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background-color: #cccccc;
+  }
+
+  ::-webkit-resizer {
+    width: 16px;
+    height: 16px;
+    background-color: #cccccc;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAN0lEQVR4Ae3MgQUAMBRDwU5fFF05lb/CARTBw2Ulof0DxPtcwp3hNuEYnjbcEW4TjuFpwx3h9gMWGgZ2Y/PT2gAAAABJRU5ErkJggg==");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+  }
+
+  ::-webkit-scrollbar-button,
+  .scroll::-webkit-scrollbar-button {
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: inset 1px 1px 0 0 white, inset -1px -1px 0 0 #868a8e;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #cccccc;
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  ::-webkit-scrollbar-button:active,
+  .scroll::-webkit-scrollbar-button:active {
+    background-position: 2px 2px;
+  }
+
+  ::-webkit-scrollbar-button:horizontal:decrement,
+  .scroll::-webkit-scrollbar-button:horizontal:decrement {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAHklEQVQY02NgoBT8xyX8H5fwf1zCpOjAYwceV1EEAAO2D/HsQ4vsAAAAAElFTkSuQmCC");
+  }
+
+  ::-webkit-scrollbar-button:horizontal:increment,
+  .scroll::-webkit-scrollbar-button:horizontal:increment {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAHUlEQVQY02NgIB/8xy3xH7fEf9wS/0nUQZqrKAYAK44P8ZRmzLQAAAAASUVORK5CYII=");
+  }
+
+  ::-webkit-scrollbar-button:vertical:decrement,
+  .scroll::-webkit-scrollbar-button:vertical:decrement {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGklEQVR4AWMYxuA/SYphmETFhDX9x4mHGQAAcL4P8dQiMq8AAAAASUVORK5CYII=");
+  }
+
+  ::-webkit-scrollbar-button:vertical:increment,
+  .scroll::-webkit-scrollbar-button:vertical:increment {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAF0lEQVQY02NgoBf4jwJxSOHQhcNAOgMAWWAP8Rv2U3UAAAAASUVORK5CYII=");
+  }
+
+  ::-webkit-scrollbar-button:horizontal:increment:start,
+  .scroll::-webkit-scrollbar-button:horizontal:increment:start {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-button:horizontal:decrement:end,
+  .scroll::-webkit-scrollbar-button:horizontal:decrement:end {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-button:vertical:increment:start,
+  .scroll::-webkit-scrollbar-button:vertical:increment:start {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-button:vertical:decrement:end,
+  .scroll::-webkit-scrollbar-button:vertical:decrement:end {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-button:active,
+  .scroll::-webkit-scrollbar-button:active {
+    border-top: 1px solid #868a8e;
+    border-left: 1px solid #868a8e;
+    border-bottom: 1px solid #868a8e;
+    border-right: 1px solid #868a8e;
+    box-shadow: none;
+  }
+
+
+    </style>
+  </head>
+  
+  <body>
+  <div class="nav">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Socials.html">Socials</a>
+        <a href="Guestbook.html">Guestbook</a>
+        <a href="Comics.html">Comic Collection</a>
+        <a href="Reading.html">Where to start reading?</a>
+    </nav>
+    </div>
+    
+   <img src="Nolan 2.png" alt="decorative-image2" class="decorative-image2">
+   <!--<img src="https://uncreatice.neocities.org/nolon.gif" alt="decorative-image" class="decorative-image"> -->
+  
+  <!--Background Audio-->
+ 
+<div style="position: fixed; z-index: -99; width: 0; height: 0">
+  <iframe frameborder="0" height="0" width="0"
+    src="https://youtube.com/embed/xI0w_XROhE0?autoplay=1&controls=0&showinfo=0&autohide=1&loop=1">
+  </iframe>
+</div>  
+   <!--profile image-->
+  <div class="profile-box">
+    <img class="profile-box img" src="https://uncreatice.neocities.org/Miime.png" alt="Miime.png">
+  </div>
+  <!--about me-->
+  <div class="aboutme">
+    <p> 18 - Trans man - He/Him - </p>
+  </div>
+  
+  <!--main-->
+  <div class="content-container">
+  
+  <!--about-->
+  
+ <div class="rightside-box">
+ <h3>About Me!</h3>
+ <p> Hey there I'm Uncreatice! I'm a College Freshman studying Electrical and Computer Engineering.
+  The lil guy with the crown and tail is my persona named Nolan :p. Uhhhh idk wat else to say</p>
+  </div> <br>
+  
+  <!--about site-->
+  <div class="rightside-box">
+   <h3>About this site</h3>
+   <p>This site is dedicated to all things Nightwing related as well as being my personal site.</p>
+  </div> <br>
+  
+  
+  <div class="grid">
+   <div class="info-box">
+    <h3>Fandoms & Interests</h3>
+    <ul><li>DC(Mainly Nightwing)</li>
+    <li>Marvel</li>
+    <li>Furry</li>
+    <li>Static</li>
+    <li>Iron Fist</li>
+    <li>Spiderboy</li>
+    <li>Comics</li>
+    <li>Art</li>
+    <li>Video Games</li>
+    </ul>
+   </div><br>
+  
+   <div class="info-box">
+    <h3>Music</h3>
+    <ul><li>Good Kid</li>
+    <li>Malcom Todd</li>
+    <li>Atomic treehouse</li>
+    <li> Bloodhound gang</li>
+    <li>Weezer</li>
+    <li>Wallows </li>
+    <li>almost monday</li></ul>
+    </div>
+  </div>
+       
+       
+    </div>
+    
+  </body>
+</html>
