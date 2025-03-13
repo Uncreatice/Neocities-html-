@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #000033;
+            color: #ffcc00;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            color: #ffcc00;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header, footer {
+            background-color: #000033;
+            color: #ffcc00;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffcc00;
+        }
+        .guestbook-form {
+            background-color: #00bfff;
+            border: 3px solid #fff; /* White border */
+            box-shadow: 5px 5px 0 #000; /* Black shadow */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .guestbook-form input, .guestbook-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #000033; /* Dark blue background */
+            color: #ffcc00; /* Yellow text */
+            border: 3px solid #fff; /* White border */
+            box-shadow: 5px 5px 0 #000; /* Black shadow */
+            border-radius: 5px;
+        }
+        .guestbook-entries {
+            margin: 20px 0;
+        }
+        .entry {
+            background-color: #00bfff;
+            border: 3px solid #fff; /* White border */
+            box-shadow: 5px 5px 0 #000; /* Black shadow */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            
+        }
+        .decorative-image{
+          position:absolute;
+          top:54px;
+          left:28%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:410px;
+          }
+        .decorative-image4{
+          position:absolute;
+          top:31px;
+          left:73%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:356px;
+          }
+        .decorative-image6{
+          position:absolute;
+          top:159px;
+          left:92%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:490px;
+          }
+        .decorative-image7{
+          position:absolute;
+          top:159px;
+          left:6%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:190px;
+          }
+    </style>
+  </head>
+  <body>
+  <!--DECORATIVE IMAGES-->
+  <img src="https://insidepulse.com/wp-content/uploads/2023/06/Spider-Boy-logo-1536x331.png" alt="decorative-image" class="decorative-image">
+  <img src="https://vignette2.wikia.nocookie.net/fictionalcrossover/images/5/54/A_static_shock_logo.png/revision/latest?cb=20150827183716" alt="decorative-image4" class="decorative-image4">
+  <img src="https://www.pngarts.com/files/2/Iron-Fist-PNG-Transparent-Image.png" alt="decorative-image6" class="decorative-image6">
+  <img src="bailey.png" alt="decorative-image7" class="decorative-image7">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Socials.html">Socials</a>
+            <a href="Guestbook.html">Guestbook</a>
+            <a href="Comics.html">Comics</a> <!-- Link to the new comics page -->
+            <a href="Reading.html">Where to Start Reading?</a> 
+        </nav>
+    <center><h1>Guestbook</h1></center>
+     <div class="container">
+<form class="guestbook-form" id="guestbook-form" action="https://formspree.io/f/meoovana" method="POST">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Submit</button>
+</form>
+        <div class="guestbook-entries" id="guestbook-entries">
+            <!-- Entries will be displayed here -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Uncreatice  2025</p>
+    </footer>
+    
+    
+    
+    
+    
+<script>
+    document.getElementById('guestbook-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+
+        // Save the message to local storage
+        let entries = JSON.parse(localStorage.getItem('guestbookEntries')) || [];
+        entries.push({ name, message });
+        localStorage.setItem('guestbookEntries', JSON.stringify(entries));
+
+        // Display the new entry
+        displayEntries();
+
+        // Reset the form
+        document.getElementById('guestbook-form').reset();
+    });
+
+    function displayEntries() {
+        const guestbookEntries = document.getElementById('guestbook-entries');
+        guestbookEntries.innerHTML = '';
+        let entries = JSON.parse(localStorage.getItem('guestbookEntries')) || [];
+        entries.forEach(entry => {
+            const entryDiv = document.createElement('div');
+            entryDiv.className = 'entry';
+            entryDiv.innerHTML = `<strong>${entry.name}</strong><p>${entry.message}</p>`;
+            guestbookEntries.appendChild(entryDiv);
+        });
+    }
+
+    // Display entries on page load
+    window.onload = displayEntries;
+</script>
+</body>
+</html>
