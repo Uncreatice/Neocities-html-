@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art and Stuff</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+   <style>
+     body{
+       background: #9eb4cd;
+       background-image: url('https://rivendell.neocities.org/backgrounds/checkertranslucent.gif');
+       background-size: 5px 5px;
+       font-family: Arial, sans-serif;
+       line-height: 1.6;
+       background-size: 10%; /* Ensures the background covers the entire page */
+       background-repeat: repeat; /* Prevents the background from repeating */
+       background-attachment: fixed;/* Keeps the background fixed during scrolling */
+       height: auto; 
+       margin: 0;
+       padding: 0;
+       }
+     .container{
+       background: #636da2;
+       border: 4px ridge white;
+       box-shadow: 4px 4px 0 black;
+       }
+        .nav-container {
+            background-color: #00bfff; /* Nightwing blue */
+            border: 4px dashed #fff; /* White border */
+            box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00; /* Black shadow */
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffcc00;
+        }
+        /* Navigation styling */
+        .nav-container nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-container nav ul a {
+            padding: 10px;
+            text-decoration: none;
+        }
+/*Links to look like buttons*/
+        .nav-link{
+          display:inline-block;
+          padding: 10px 20px;
+          background-color: #ffcc00;
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          border: 2px solid black;
+          border-radius: 8px;
+          box-shadow: 3px 3px 0 #000;
+          transition: transform 0.2s, box-shadow 0.2s}
+        .nav-link:hover{
+          background-color: #ff6347;
+          transform: translate(2px, 2px);
+          box-shadow: 1px 1px 0 black;}
+        .nav-link:active{
+          transform: translate(4px 4px);
+          box-shadow: none;}
+        /* Footer */
+        footer img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        /* Speech bubble styling */
+        .speech-bubble {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+      /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .box {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            footer img {
+                width: 80%;
+            }
+
+            .content {
+                width: 100%;
+            }
+        }
+    
+        .art-grid{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+          }
+        .art-item{
+            background-color: #00bfff; /* Nightwing blue */
+            border: 2px solid #fff; /* White border */
+            box-shadow: 5px 5px 0 #000; /* Black shadow */
+            padding: 10px;
+            width: 900px; /* Adjust width as needed */
+            text-align: center;          
+          }  
+        .art-item img{
+            width: 100%;
+            height: auto;
+            border: 2px solid #fff; /* White border */
+            box-shadow: 3px 3px 0 #000; /* Black shadow */  
+            justify-content: center
+          }
+   </style>
+  </head>
+  <body>
+  
+  <!--Background Audio-->
+ 
+<div style="position: fixed; z-index: -99; width: 0; height: 0">
+  <iframe frameborder="0" height="0" width="0"
+    src="https://youtube.com/embed/-6FZZBXybjo?autoplay=1&controls=0&showinfo=0&autohide=1&loop=1">
+  </iframe>
+</div>    
+  <!--Navigation Bar-->
+    <div class="nav-container">
+    <nav>
+    <ul>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="About.html" class="nav-link">About</a>
+        <a href="Socials.html" class="nav-link">Socials</a>
+        <a href="Guestbook.html" class="nav-link">Guestbook</a>
+        <a href="Comics.html" class="nav-link">Comic Collection</a>
+        <a href="Reading.html" class="nav-link">Where to start reading?</a>
+        <a href="links.html" class="nav-link">links</a>
+    </ul>
+    </nav>
+    </div>
+    <!--Art container-->
+
+     <div class="art-grid">
+      <div art class= "art-item">
+       <div class="container"> <h1>2025</h1> </div>
+        <ul>
+        <li><img src="https://64.media.tumblr.com/f7df559b09180dde26f0f5592ff7237a/26fa3f8fa81fe213-e2/s2048x3072/bf552b41a32ab197ecae15966c00b2abe9496d4d.jpg">
+        </li>
+        </ul>
+        <div class="container"> <h1> 2024 </h1> </div>
+        <ul>
+         <li><img src="https://64.media.tumblr.com/45cf8738ac7d6d60856301fa3138b37b/d9a6e47a44262980-32/s2048x3072/233932383931450049244f230b9f2d4b3248e288.pnj">
+         </li>
+         <li><img src="https://64.media.tumblr.com/0d4d9803ae9b8553e92955d484b85766/0e18c7579ba44cc4-c7/s2048x3072/50cb508415a8e16ffce0570d553afce224ad2dcc.pnj">
+         </li>
+         <li><img src="https://64.media.tumblr.com/119583e268ece9293112219ed8738a40/069d93e1acaced31-82/s2048x3072/37ee5de554cdcfd2a48626594440c32838f3e2fc.jpg">
+         </li>
+         <li><img src="https://64.media.tumblr.com/16825eb0f42ed803d98bd2de49f56e2c/7454a6dc39e2482b-35/s2048x3072/ce95de14d3b621bef1179239855d4ca9bb8e9ae5.jpg">
+         </li>
+         <li><img src="https://64.media.tumblr.com/1021a2378808164ee39906fabf082001/047d2f3d20f8e5a0-7e/s2048x3072/daead1320d46c297142b30252aeecc0f0addc6c2.jpg">
+         </li>
+        </ul>
+       </div>
+     </div>
+    
+    
+  </body>
+</html>
