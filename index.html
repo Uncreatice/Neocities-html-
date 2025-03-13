@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://furryring.neocities.org/onionring.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncreatice</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+#CurrentlyReading, #Audioplayer {
+  position: absolute;
+  z-index: 1000;
+  padding: 10px;
+  cursor: move; /* Ensure they have a cursor to indicate they are draggable */
+  border: 4px solid #fff;
+  box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00;
+}
+#Sillies{
+  position: absolute;
+  z-index: 1000;
+  padding: 10px;
+  cursor: move; /* Ensure they have a cursor to indicate they are draggable */
+  }
+#updatesBox{
+  top: 289px;
+  width: 459px;
+  height: 250px;
+  z-index: 2000;
+  left: 48%;
+  overflow: hidden;
+  position: absolute;
+
+  }  
+#updatesContent{
+  z-index: 1020;
+  display: inline-block;
+  position: absolute;
+  animation: scrollUp 10s linear infinite;
+  }
+@keyframes scrollUp{
+  0%{
+    top: 0%;
+    }
+  100%{
+    top: -50%;
+    }
+  }
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2)1px, transparent 1px);
+    background-size: 5px 5px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.header {
+  cursor: move;
+}
+
+#CurrentlyReading {
+  color: #ffcc00;
+  top: 555px;
+  left: 60%;
+  background-color: #00bfff
+}
+#CurrentlyReading h3 {
+  font-size: 12px;
+  }
+#CurrentlyReading img{
+    height:auto;
+  width:100px;
+  border: 4px solid #fff;
+  box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00;
+  }
+#Sillies {
+  color: #ffcc00;
+  top: 625px;
+  left: 38%;
+}
+
+#Audioplayer {
+  color: #000033;
+  background-color: #00bfff;
+  border: 4px, solid #fff;
+  padding: 10px;
+  box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00;
+  top: 222px;
+  left: 67%;
+}
+#ScrollingB{
+  height: auto;
+  width:100%;
+  }
+       @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&display=swap');
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            color: #00bfff;
+            position: relative;
+
+        }
+        body::before{
+            content:"";
+            position: fixed;
+            top:0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://th.bing.com/th/id/R.dd7afd24e66f54c495e77985ea90b8b8?rik=1cmRmtvdxrgR6w&pid=ImgRaw&r=0');
+            background-size: cover;
+            background-blend-mode: multiply;
+            opacity: 0.8;
+            z-index:-1;
+          }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: #94bbe3;
+            border: 4px ridge white;
+            box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00;
+        }
+       .box {
+           flex: 1 1 calc(33.333% - 20px);
+           background-color: #333966;
+           padding: 20px;
+           width: 45%;
+           box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00;
+           border: 4px ridge #fff;
+}
+       .box1 {
+           flex: 1 1 calc(33.333% - 20px);
+           background-color: #fff;
+           padding: 20px;
+           width: 42%;
+           box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00;
+           border: 4px ridge #000;
+}
+        footer {
+            background-color: #000033;
+            color: #ffcc00;
+            text-align: center;
+            padding: 6px 0;
+        }
+        @keyframes wobble{
+          0%, 100% {transform: rotate(-3deg);}
+          50%{transform: rotate(3deg);}
+          }
+          
+        .site-title{
+          font-family: 'Luckiest guy', sans-serif;
+          font-size: 60px;
+          color: white;
+          text-shadow: 3px 3px 0 black, -3px -3px 0 black, 3px, -3px 0 black, -3px 3px 0 black;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-left: -150px;
+          display: inline-block;
+          padding: 10px;
+          background: radial-gradient(circle, cyan 30%, blue 70%);
+          border: 5px solid black;
+          box-shadow: 5px 5px 0 black, 8px 8px 0 rgba(0,0,0,0.5);
+          transform: rotate(-3deg);
+          position: relative;
+          }
+        .site-title:before{
+          content:"";
+          position:absolute;
+          top:-15px;
+          left:-15px;
+          right:-15px;
+          bottom:-15px;
+          background: radial-gradient(circle, rgba(0,0,0,0.2) 10%, transparent 30%) 0 0 / 10px 10px;
+          z-index:-1;
+          }
+
+        .nav-container {
+            background-color: #00bfff; /* Nightwing blue */
+            border: 4px dashed #fff; /* White border */
+            box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00; /* Black shadow */
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffcc00;
+        }
+        
+        .content {
+            display: flex;
+            gap: 20px;
+            justify-content: center; /* Center the content */
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }        
+        
+        .panel-of-day{
+          position: absolute;
+          background-color: #00bfff;
+          border: 4px solid #fff;
+          box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00;
+          padding: 10px;
+          color: #ffcc00;
+          width: 680px;
+          top: 920px;
+          left: 50%;
+          text-align: center;
+          }
+        .panel-of-day img{
+          width:400px;
+          height: auto;
+          display: flex;}
+        .nav-container{
+          position: absolute;
+          top:235px;
+          left:6%;
+          z-index: 1015;
+          height: auto;
+          width: 150px;
+          background-color: #00bfff;
+          border: 4px dotted #fff;
+          box-shadow: 5px 5px 0 #000, 8px 8px 0 #ffcc00;
+          margin: 20px 0;
+          padding: 10px;
+          text-align: left;
+          }
+        /*Webring box*/
+
+        .webrings{
+          top: 989px;
+          width: 220px;
+          height: auto;
+          z-index: 1001;
+          left: -2%;
+          position: absolute;
+          display:inline-block;
+          padding: 10px 20px;
+          color: yellow;
+          border: 4px ridge black;
+          background: #9db2c2;
+          text-decoration: none;
+          font-weight: bold;
+          }
+
+        /* For larger screens, place the boxes side-by-side */
+        @media (min-width: 768px) {
+            .side-by-side {
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+
+        /* Navigation styling */
+        .nav-container nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-container nav ul a {
+            padding: 10px;
+            text-decoration: none;
+        }
+
+
+        .art-button{
+          top: 489px;
+          width: 459px;
+          height: 250px;
+          z-index: 2000;
+          left: 65%;
+          overflow: hidden;
+          position: absolute;
+          display:inline-block;
+          padding: 10px 20px;
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          transition: transform 0.2s, box-shadow 0.2s
+          }
+        .art-button:hover{
+          transform: translate(2px, 2px);}
+        .art-button:active{
+          transform: translate(4px 4px);
+          box-shadow: none;}
+          
+          
+/*Links to look like buttons*/
+        .nav-link{
+          display:inline-block;
+          padding: 10px 20px;
+          background-color: #ffcc00;
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          border: 2px solid black;
+          border-radius: 8px;
+          box-shadow: 3px 3px 0 #000;
+          transition: transform 0.2s, box-shadow 0.2s}
+        .nav-link:hover{
+          background-color: #ff6347;
+          transform: translate(2px, 2px);
+          box-shadow: 1px 1px 0 black;}
+        .nav-link:active{
+          transform: translate(4px 4px);
+          box-shadow: none;}
+        /* Footer */
+        footer img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        /* Speech bubble styling */
+        .speech-bubble {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+      /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .box {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            footer img {
+                width: 80%;
+            }
+
+            .content {
+                width: 100%;
+            }
+        }
+
+          
+/* Other styles remain the same */
+
+        .decorative-image{
+          position:absolute;
+          top:497px;
+          left:7%;
+          transform: translateX(-50%);
+          z-index:1400;
+          height: auto;
+          width:50px;
+          }
+        .decorative-image2{
+          position:absolute;
+          top:214px;
+          left:49%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:120px;
+          }
+        .decorative-image3{
+          position:absolute;
+          top:620px;
+          left:89%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:150px;
+          }
+        .decorative-image4{
+          position:absolute;
+          top:596px;
+          left:56%;
+          transform: translateX(-50%);
+          z-index:900;
+          height: auto;
+          width:150px;
+          }
+        .decorative-image5{
+          position:absolute;
+          top:228px;
+          left:32%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:250px;
+          }
+        .decorative-image6{
+          position:absolute;
+          top:820px;
+          left:43%;
+          transform: translateX(-50%);
+          transform: rotate(-40deg);
+          z-index:999;
+          height: auto;
+          width:190px;
+          }
+        .decorative-image7{
+          position:absolute;
+          top:65px;
+          left:12%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:290px;
+          }
+        .decorative-image8{
+          position:absolute;
+          top:551px;
+          left:5%;
+          transform: translateX(-50%);
+          z-index:1099;
+          height: auto;
+          width:210px;
+          }
+        .decorative-image9{
+          position:absolute;
+          top:700px;
+          left:7%;
+          transform: translateX(-50%);
+          z-index:1400;
+          height: auto;
+          width:120px;
+          }
+        .decorative-image10{
+          position:absolute;
+          top:-5px;
+          left:54%;
+          transform: translateX(-50%);
+          z-index:-1;
+          height: auto;
+          width:1350px;
+          }
+        .decorative-image11{
+          position:absolute;
+          top:1068px;
+          left:24%;
+          transform: translateX(-50%);
+          z-index:1000;
+          height: auto;
+          width:360px;
+          }
+        .decorative-image12{
+          position:absolute;
+          top:347px;
+          left:7%;
+          transform: translateX(-50%);
+          z-index:1400;
+          height: auto;
+          width:50px;
+          }
+        .decorative-image13{
+          position:absolute;
+          top:232px;
+          left:7%;
+          transform: translateX(-50%);
+          z-index:1400;
+          height: auto;
+          width:96px;
+          }
+
+          
+        .speech-bubble {
+         position: relative;
+         background: #00bfff;
+         ; 
+         padding: 10px;
+        border-radius: 10px;
+         box-shadow: 5px 5px 0 #000;
+}
+
+       .speech-bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: #00bfff;
+        border-bottom: 0;
+        margin-left: -10px;
+        margin-bottom: -10px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="site-title">Uncreatice</h1>
+    </header>
+    
+    <footer><img src="https://64.media.tumblr.com/dd7b90c6729bb3e139616ef08b9fbc8f/006179b727eee8ca-83/s100x200/14e41b82f78b2f1629d6ccafe419402062fd4d9e.pnj"><img src="Miku.gif"><img src="trans.png"><img src="eveelutions.gif"><img src="https://64.media.tumblr.com/d111ea1ad995ef83897cd65353f6abbd/0b8f9c5eb57a88cf-69/s250x400/90ed78fd3cf10b2ebbf546789018c3bb652c6d2a.gifv"><img src="https://64.media.tumblr.com/22245438e60ecea3ad2a7abcf3b76ac2/75c6f65676046c0e-ec/s100x200/65ea8cbfdb2f5e35304a0fb4b220f4ae9d8793ac.png"><img src="https://64.media.tumblr.com/a5f8bcbdbae9a77b651a0466b8c96afb/tumblr_pwdyozj4qK1xbgu08o9_100.gifv"><img src="https://64.media.tumblr.com/866b8c332e50ecd843a910781ea78504/tumblr_pxa2568nXY1xbgu08o3_100.png">
+    </footer>
+    <div class="nav-container">
+    <nav>
+    <ul>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="About.html" class="nav-link">About</a>
+        <a href="Socials.html" class="nav-link">Socials</a>
+        <a href="Guestbook.html" class="nav-link">Guestbook</a>
+        <a href="Comics.html" class="nav-link">Comic Collection</a>
+        <a href="Reading.html" class="nav-link">Where to start reading?</a>
+        <a href="links.html" class="nav-link">links</a>
+        <a href="chatbox.htmlw" class="nav-link">Chatbox</a>
+    </ul>
+    </nav>
+    </div>
+    <!--Webrings box-->
+    <div class="webrings">
+     <h1>WebRings</h1><br>
+    <!--Music ring-->
+     <div style="width:104px">
+     <a href="https://peanits.lol/webrings/musicring/index.php"><img src="https://peanits.lol/webrings/musicring/assets/button.gif"></a>
+     <a href="https://peanits.lol/webrings/musicring/rand.php">rand</a>
+     <a href="https://peanits.lol/webrings/musicring/prev.php?slug=Uncreatice">prev</a>
+     <a href="https://peanits.lol/webrings/musicring/next.php?slug=Uncreatice">next</a>
+    </div>
+
+    <!--Transing the web-->
+     <script src="https://transring.neocities.org/ring.js"></script>
+
+    <!--Furryring-->
+     <div id='furryring'>
+        <script type="text/javascript" src="https://furryring.neocities.org/onionring-variables.js"></script>
+        <script type="text/javascript" src="https://furryring.neocities.org/onionring-widget.js"></script>
+     </div>
+        
+    <!--Neocreatives-->
+    <div id='ncring'> 
+      <script type="txt/javascript" src="https://neocreatives.neocities.org/onionring-variables.js"></script>
+       <script type="text/javascript" src="https://neocreatives.neocities.org/onionring-widget.js"></script> 
+    </div> 
+          
+    <!--Retronaut webring-->
+    <a href='https://webring.dinhe.net/prev/http://uncreatice.neocities.org'>Previous</a>Retronaut webring
+    <a href='https://webring.dinhe.net/next/http://uncreatice.neocities.org'>Next</a>
+    </div>
+    
+    
+        <!-- Your second box (updates) -->
+      <div id="updatesBox">
+       <div id="updatesContent">
+        <div class="box">
+            <h3>Updates</h3>
+            <p>28-02-25</p>
+            <p>created chatbox.html and moved chat to there.</p>
+            <p>20-02-25</p>
+            Edited currently reading box.
+            <p>16-02-25</p>
+            <p>Added backgroung music to links page</p>
+            <p>Joined a couple more webrings</p>
+            <p>15-02-25</p>
+            <p>Edited guestbook Decorative images</p>
+            <p>14-02-25</p>
+            <p>JOINED MY FIRST WEBRING YIPPEEE</p>
+            <p>Added webring box</p>
+            <p>Added Art gallerly html. Added Art Gallery button on index.html</p>
+            <p>13-02-25</p>
+            <p>Overhauled the about me page. Added profile image box to about me page.</p>
+            <p>Added background music to links and about me page. Edited Updates box</p>
+            <p>10-02-2025:</p>
+            <p>Recently did small updates to the homepage. Overhauled the old About me page(Current project right now)</p>
+            <p>Moved Likes to about me page</p>
+        </div>
+       </div>
+
+      </div>
+      
+      <!--Art gallerly Button-->
+  
+    <div class="art-button">
+    <a href="Art.html" class="nav-link">Art Gallery</a>
+    </div>
+    
+<!--Audio player-->
+
+<div id="Audioplayer" class="speech-bubble">
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6nLslZb8ObwCkVB9XhCsAH?utm_source=generator" width="300" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="fast"></iframe>
+</div>
+
+
+<!--currently reading-->
+<div id="CurrentlyReading" class="speech-bubble">
+  <div id="draggable">
+    <h3 class="header">Currently Reading: Nightwing Fear State</h3>
+    <center><img src="https://th.bing.com/th/id/OIP.8d-zz3fR0iwQdkAv2tajJAAAAA?rs=1&pid=ImgDetMain" alt="Currently Reading Image"></center>
+  </div>
+</div>
+
+
+
+<!-- Main Content Area -->
+<div class="container">
+    <div class="content">
+        <!-- Your first box (GIF Image) -->
+        <div class="box">
+            <img src="https://media1.tenor.com/m/EIaOQrVOZZAAAAAC/nightwing-crossarms.gif" alt="Nightwing GIF">
+          <div class="box1">
+            <center><a href="https://uncreatice.neocities.org/"><img src="uncreatice.png"><br></a><p>Psst Psst You can link back to my site with this</p></center>
+            <pre><code>&lt;a href="https://uncreatice.neocities.org/"&gt;&lt;</code></pre>
+            <pre><code>img src="uncreatice.png"&gt;&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+        
+
+    <!-- Other content below -->
+    <div id="draggable">
+        <div id="Sillies">
+          <img src="Sillies1.png"><br>
+        </div>
+    </div>
+</div>
+
+<!--Decoration images-->
+        </div>
+       <img src="NWFunko.png" alt="decorative-image" class="decorative-image"><br>
+       <img src="NWLogo.png" alt="decorative-image2" class="decorative-image2"><br>
+       <img src="NWRunning.png" alt="decorative-image3" class="decorative-image3"><br>
+       <img src="NWLetterlogo.png" alt="decorative-image5" class="decorative-image5"><br>  
+       <img src="nightwing.png" alt="decorative-image4" class="decorative-image4"><br>  
+       <img src="https://static.vecteezy.com/system/resources/previews/024/800/500/non_2x/pow-comic-explosion-with-yellow-and-blue-colors-text-bubbles-for-cartoon-speeches-comic-blast-with-smash-effects-and-stars-free-png.png" alt="decorative-image6" class="decorative-image6"><br>
+       <img src="https://cdn.pixabay.com/photo/2016/08/17/22/22/kapow-1601675_960_720.png" alt="decorative-image7" class="decorative-image7"><br>
+       <img src="NWSillySpin.gif" alt="decorative-image8" class="decorative-image8"><br>
+       <img src="https://media.tenor.com/H97c1l6y7skAAAAj/nightwing-dick-grayson.gif" alt="decorative-image9" class="decorative-image9"><br>
+       <img src="home page decor.png" alt="decorative-image10" class="decorative-image10"><br>
+        <img src="silly.png" alt="decorative-image11" class="decorative-image11"><br>
+        <img src="disco.png" alt="decorative-image12" class="decorative-image12">
+        <img src="Titans_S1_Nightwing_POP_GLAM-WEB.png" alt="decorative-image13" class="decorative-image13">
+
+    <div class="panel-of-day">
+    <h2>Dick Grayson Panel of the Day</h2>
+    <img src="lmaoLOOKATHIM.jpg">
+    </div>
+    
+  <footer id="ScrollingB">
+  <img src="artist.gif"><img src="badapple.webp"> <img src="len.webp"><img src="osu.png"><img src="3ds.webp"> <img src="roblox.png"><img src="goodwithpc.gif">
+    <img src="Slly.gif"> <img src="ilovemp3.gif"><br><img src="menmypc.gif"><img src="https://cyber.dabamos.de/88x31/enhance.gif"><img src="https://cyber.dabamos.de/88x31/fckgoogle.gif"><img src="https://raining-starss.neocities.org/thebread%20(3).gif"><img src="https://raining-starss.neocities.org/3573857%20(29).gif"><img src="https://raining-starss.neocities.org/button%20(5).gif"><img src="https://cyber.dabamos.de/88x31/firefoxget.gif"><img src="https://cyber.dabamos.de/88x31/ubuntu-88x31.gif"><img src="https://cyber.dabamos.de/88x31/vim.vialle.love.anim.gif"></footer>
+
+
+<!--Script for scrolling in footers-->
+<script>
+
+const sillys = document.getElementById('ScrollingB');
+
+</script>
+
+
+<script>
+
+const tabs = document.querySelectorAll('.tabs');
+const spotifyPlayer = document.getElementById('spotifyplayer');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const playlistId = tab.getAttribute('data-playlist');
+    spotifyPlayer.src= `https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator`;
+    });
+  });
+</script>
+<!--Script for scrolling on updates box-->
+<script>
+ function autoSCroll(){
+   let box = document.getElementByID("updatesBox");
+   let content = document.getElementByID("updatesContent");
+   
+   let scrollAmount = 0;
+   let scrollSpeed = 50;
+   let scrollStep = 1;
+   
+   function scrollDown(){
+     if (scrollAmount >= content.scrollHeight - box.clientHeight){
+       scrollAmount = 0;
+       }
+      else{
+        scrollAmount += scrollStep;
+        }
+      box.scrollTop = scrollAmount;
+     }
+    setInterval(scrollDown, scrollSpeed);
+   }
+  window.onload = autoscroll;
+</script>
+
+<!--Script for audio player and draggable items-->
+<script>
+ // Make the Sillies div draggable
+dragElement(document.getElementById("Sillies"));
+
+// Make the Audioplayer draggable
+dragElement(document.getElementById("Audioplayer"));
+
+// Make the CurrentlyReading div draggable
+dragElement(document.getElementById("CurrentlyReading"));
+
+function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    
+    // If the element has a specific header for dragging (like #Sillies)
+    if (elmnt.querySelector(".header")) {
+        elmnt.querySelector(".header").onmousedown = dragMouseDown;
+    } else {
+        // Otherwise, move the DIV from anywhere inside the DIV
+        elmnt.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // Get the initial mouse position
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // Calculate the new cursor position
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // Set the new position for the element
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        // Stop moving when mouse button is released
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+}
+</script>
+
+</body>
+</html>
